@@ -1,5 +1,5 @@
 # boxofammo
 Metaversing 1st RepoBox 
-##BoxofAmmo > BoxofAmmo2
-Machine Gun > Keep it Levels 
+##BoxofAmmo to BoxofAmmo2
+Machine Gun must Keep it Levels 
 #fin
