@@ -10,7 +10,7 @@ html{box-sizing: border-box;}
 
 body
 {
-    background-image: url(images/bgkid.jpg);
+    background-image: url(https://github.com/sknmonger/boxofammo/blob/main/css/images/bgkid.jpg?raw=true);
     background-attachment: fixed; 
     background-position: center;
     background-size: cover;   
