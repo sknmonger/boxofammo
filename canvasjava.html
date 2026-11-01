@@ -1,0 +1,145 @@
+<!--Goal is to create an image file using code using Javascript
+
+Q: What image should I create? 
+
+A portal design symbol...
+
+-->
+
+
+
+<html>
+   
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/canvas.css">
+    <link rel="icon" type="image/icon" href="images/favicon2.ico">
+    <title> CANVAS GRAPHICS 2024 MJB</title>
+</head>
+
+<body>
+ 
+    <header>
+       
+            <div id="graphic-header">
+                <svg width="100%" height="300">
+                    <ellipse cx="200" cy="200" rx="200" ry="150" fill="#" />
+                    <text fill="yellow" text-shadow=" 10 10 10 red" font-size="50" font-family="arial" x="55" y="250">MY CANVAS</text>
+                </svg>
+               <!-- SVG doesn't work on canvas-->
+            </div>
+
+    
+    </header>
+ 
+<canvas id="fillo" width="1000" height="500">
+    <script>
+        const canvas = document.getElementById("fillo");
+        const x1 = canvas.getContext("2d");
+        
+        x1.fillStyle = "gold";
+        x1.fillRect(460,5,30,500); // x start y start / x end y end//
+        </script>
+</canvas>
+
+
+</br>
+    <canvas id="bportal" width="500" height="500" style="border:10px solid #004;"></canvas>
+    <canvas id="bportal2" width="500" height="500" style="border:10px solid rgb(251, 20, 43);" ></canvas>
+
+    <script>
+        var portal = document.getElementById("bportal");
+        var x = portal.getContext("2d");
+        
+        x.beginPath();
+        x.moveTo(0,0); // start points
+        x.lineTo(250,500); // end points
+        x.lineWidth = 10;  
+        x.stroke(); // draw
+
+        x.beginPath();
+        x.moveTo(0,0);
+        x.lineTo(350,500); 
+        x.lineWidth = 3;
+        x.stroke();
+
+        x.beginPath();
+        x.moveTo(0,0);
+        x.lineTo(450,500); 
+        x.lineWidth = 1;
+        x.stroke();
+
+        
+/*otherside*/
+        x.beginPath();
+        x.moveTo(500,0);
+        x.lineTo(250,500); 
+        x.lineWidth = 10;
+        x.stroke();
+
+        x.beginPath();
+        x.moveTo(500,0);
+        x.lineTo(150,500); 
+        x.lineWidth = 3;
+        x.stroke();
+
+        x.beginPath();
+        x.moveTo(500,0);
+        x.lineTo(50,500); 
+        x.lineWidth = 1;
+        x.stroke();
+
+    </script>
+<!--pos x pos y, size within x and y ,-->
+<script>
+    var portal = document.getElementById("bportal2");
+    var x = portal.getContext("2d");
+
+    x.beginPath();
+    x.arc(250, 250, 200, 200, 100*Math.PI); 
+    x.stroke();
+
+    
+</script>
+
+<object id="app1" style="border: 10px black;" width="60%" height="500px" data="#"></object>
+
+<h2>DOES IT LOOK? PORTAL<em>DESIGN</em></h2>
+<p class="pgp">What kind of <b>Portal</b> design should I create?</p>
+<!-- 10 SVG graphics-->
+
+
+<h2>A circle within a circle?</h2>
+<div id="cwc">    
+
+
+<svg id="smallcircle" width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="375" cy="375" r="50" stroke="black" stroke-width="10" fill="black" />
+    <text fill="yellow" font-weight="bold" font-size="24" font-family="Impact" x="350" y="385">BALLS</text>
+</svg>
+</svg>
+
+    <svg id="bigC" width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="450" cy="450" r="100" stroke="black" stroke-width="10" />  
+</svg>
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:rgb(83, 36, 176);stroke:rgb(210, 14, 33);stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+</div>
+
+<style>
+
+</style>
+
+<div id="Vidpt" width=100% height="auto"><p>2643docuseries #LazyMovie</p><iframe width="1280" height="720" src="https://www.youtube.com/embed/x-vQ6P9bVyI" title="5G LTE 2643" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen></iframe></div>
+
+
+</body>
+
+
+</html>

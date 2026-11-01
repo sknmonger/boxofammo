@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>ROtating rectangles without javascript code</title>
+    </head>
+<style>
+
+
+:root {
+
+    --nonvar: 0;
+}
+    .rect {
+        margin-top:3%;
+        margin-left:4%;
+        position: relative;
+         animation-name: spin;
+          animation-iteration-count: infinite;
+            animation-duration: 3s;
+        }
+
+        
+/*
+   @keyframes spin {
+  0%   { rotate: calc(1deg - (var(--variable)+ 20) * 1deg);} 
+  100% { rotate: calc(1deg - (var(45deg)+ 90deg));} 
+}
+*/
+
+  @keyframes spin {
+                0% { 
+                    /* Multiplied by 1deg to correctly convert the math into degrees */
+                    rotate: calc(1deg - (var(--variable) * 20) * 1deg); 
+                } 
+                100% { 
+                    /* Replaced var(45) with just 45, and multiplied by 1deg */
+                    rotate: calc(1deg - (45 + 390) * 1deg); 
+                }
+            }
+
+
+    
+</style>
+    <body>
+        <svg class="rect" width="150px" height="100px" style="--variable: 1;">
+            <rect width="100px" height="40px" x="10" y="10" rx="10" ry="10" fill="red"></rect>
+            No support takbo na!!!
+        </svg>
+           <svg class="rect" width="150px" height="100px" style="--variable: 2;">
+            <rect width="100px" height="40px" x="30" y="10" rx="10" ry="10" fill="red"></rect>
+            No support takbo na!!!
+        </svg>
+           <svg class="rect" width="150px" height="100px">
+            <rect width="100px" height="40px" x="60" y="10" rx="10" ry="10" fill="red"></rect>
+            No support takbo na!!!
+        </svg>
+        
+    </body>
+</html>

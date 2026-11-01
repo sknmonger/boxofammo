@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="dropdown.css">
+    <link rel="icon" type="image/icon" href="images/favicon2.ico">
+     <script type="movement" src="dropdown.jsx"></script>
+  
+  
+    <title>DropDown Widget</title>
+</head>
+
+
+<body>
+  
+
+  
+<div class="dropdown">
+  
+  <button id="dropdownBtn" class="drop-btn">
+   Artistic Biography 
+    <span class="arrow">▼</span>
+  </button>
+  
+   <button id="dropdownBtn2" class="drop-btn">
+   Performance Gear
+    <span class="arrow">▼</span>
+  </button>
+  
+   <button id="dropdownBtn3" class="drop-btn">
+   Cultural Roots
+    <span class="arrow">▼</span>
+  </button>
+  
+  <div id="dropdownMenu" class="dropdown-content">
+    <a href="#">Artistic Biography Content</a>
+    <a href="#">Paragraphy description</a>
+    <a href="#">Added paragraphy description </a>
+    <hr>
+  </div>
+  
+  
+   <div id="dropdownMenu2" class="dropdown-content">
+    <a href="#">Yamaha Guitar C40</a>
+    <a href="#">Sony Microphone</a>
+    <a href="#">Daddario Strings</a>
+    <hr>
+  </div>
+  
+   <div id="dropdownMenu3" class="dropdown-content">
+    <a href="#">Filipino Rhthym in Free Form</a>
+    <a href="#">Rondalla and Kundiman Influences</a>
+    <a href="#">Contemporary Rock and Pop Latin Influenced Music</a>
+    
+    <hr>
+  </div>
+
+</div>
+
+<script type="movement" src="dropdown.jsx"></script>
+
+<!--I can't seem to make Jsx from external Jsx to Html but it works when it is on page...
+
+
+<script>
+
+// your code goes here
+const dropdownBtn = document.getElementById("dropdownBtn");
+const dropdownBtn2 = document.getElementById("dropdownBtn2");
+const dropdownBtn3 = document.getElementById("dropdownBtn3");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownMenu2 = document.getElementById("dropdownMenu2");
+const dropdownMenu3 = document.getElementById("dropdownMenu3");
+
+// Toggle the 'show' class when clicking the button
+dropdownBtn.addEventListener("click", (e) => {
+  dropdownMenu.classList.toggle("show");
+
+
+  // Prevent the click from immediately bubbling up to the window
+  e.stopPropagation();
+});
+
+
+dropdownBtn2.addEventListener("click", (e) => {
+  dropdownMenu2.classList.toggle("show");
+
+
+  // Prevent the click from immediately bubbling up to the window
+  e.stopPropagation();
+});
+
+
+dropdownBtn3.addEventListener("click", (e) => {
+    dropdownMenu3.classList.toggle("show");
+
+
+
+  // Prevent the click from immediately bubbling up to the window
+  e.stopPropagation();
+});
+
+
+// Close the dropdown if the user clicks anywhere outside of it
+window.addEventListener("click", () => {
+  if (dropdownMenu.classList.contains("show")) {
+    dropdownMenu.classList.remove("show");
+  }
+});
+</script>-->
+
+</body>
+</html>

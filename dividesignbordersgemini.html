@@ -1,0 +1,188 @@
+<html>
+<!--THIS IS TO DISPLAY BORDER WITH MATHEMATICAL FORMULAS
+IT IS TO DISPLAY AND MAP VIA PX SPACE of Millions 
+USING BORDER WE COULD MAP SOMETHINGS AND ASSIGN CERTAIN VALUES 
+USING CSS AND CALC AND OTHERS 
+
+TO MAP: 
+IF TIME is DATE based on a sequence of *****++ THEN we want to map this also via 
+Divs as a range date. Goal now is to animate the DIVS into MOVING DIVS in a loop
+To simulate rainman. 
+
+IF DATE == Mon THEN  Display(m,t,w,th,f);
+IF DATE == Sat THEN  Display(S,Sn);
+
+$daterange
+$displayrain
+$varwd
+$varwe
+-->
+
+    <head>
+        <title>Border CSS Art - Rainman Sequence</title>
+    </head>
+    <style>
+        body {
+            border: solid red 1px;
+            background-color: #111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1 {margin-left: 30px;}
+
+        #date-range {
+            margin-left: 20px;
+            margin-top: 50px;
+            width: 2160px;
+            height: 300%;
+            position: relative;
+            border: blue 2px solid;
+        }
+        
+        #rain-maker {
+            position: relative;
+            display: flex;
+            border: solid red 2px;
+            width: 2160px;
+            max-height: auto;
+            object-fit: contain;
+            flex-wrap: wrap;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        
+        .wd, .we {
+            border: solid red 1px;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+            margin: 3px 3px;
+            max-width: 32px;
+            max-height: 32px;
+            box-sizing: border-box;
+        }
+
+        .wd { background-color: rgba(8, 0, 246, 0.955); animation-name: colorblink1; }
+        .we { background-color: rgba(0, 0, 0, 0.981); animation-name: colorblink2;}
+
+        .break { 
+            flex-basis: 100%; 
+            height: 35px; 
+            border: 1px red solid; 
+            line-height: 35px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Rainman Animation Loop Matrix */
+        @keyframes rainFall {
+            0% {
+                transform: translateY(0px); 
+                }
+            
+            50% {
+                transform: translateY(1500px); 
+                }
+            
+            100% {
+                transform: translateY(0px);  
+                }
+            
+        }
+
+        @keyframes colorblink1 {
+            0% {background-color: rgb(230, 255, 8);  border: 30px solid white;}
+            50%  {background-color: rgb(255, 254, 254);}  
+            100% {background-color: rgb(253, 253, 253); border: 30px solid white;} 
+        }
+
+        @keyframes colorblink2 {
+         0% {background-color: rgb(191, 0, 239); border: 30px solid white;}
+            50%  {background-color: rgb(69, 10, 244);}  
+            100% {background-color: rgb(25, 129, 255); border: 30px solid white;} 
+        }
+
+
+      .animating-rain {
+            animation: rainFall 1ms infinite ease-in-out; 
+        }
+    </style>
+
+    <body>
+     <div style="margin-bottom:30px;"></div>
+         <h1>RAINMAN SIMULATION duration: 1 hour</h1>
+    
+        <div id="date-range">
+
+           
+            <div id="rain-maker">
+                <!-- Elements will be dynamically mapped and rendered via JS or static layout -->
+            </div>
+        </div>
+    </body>
+
+    <script>
+        // Configuration variables matching your requirements
+        const $varwd = ['1'];
+        const $varwe = ['0'];
+        const $sequence = ['*', '*','*', '*','*','+','+'];
+        let x = 1;
+        let dataType = x;
+        //const $wd = [m,t,w,th,f];
+        //const $we = [sat,sun];
+        
+        // Function to check date-based display rules
+        function $displayrain(dateType) {
+            if (dateType === '1') {
+                return $varwd;
+            } else if (dateType === '0') {
+                return $varwe;
+            }
+            return ['*', '*', '*', '*', '*', '+','+']; // Default sequence
+        }
+
+        // Generate and map layout dynamically using PX space calculations
+        function $daterange() {
+            const container = document.getElementById('rain-maker');
+            container.innerHTML = ''; // Clear container
+
+            // Simulate sequence generation (Rainman structured grid)
+            let totalBlocks = (72*50); // Multiplexed mapping units
+            
+            for (let i = 0; i < totalBlocks; i++) {
+                let div = document.createElement('div');
+                
+                // Determine pattern grouping (Weekdays vs Weekends sequence: 5 weekdays, 2 weekends)
+                let mod = i % 7;
+                if (mod < 5) {
+                    div.className = 'wd animating-rain';
+                    div.style.animationDelay = `${(i * 1)}s`; // Staggered loop for rain effect
+                    div.innerText = $varwd[mod % $varwd.length];
+                } else {
+                    div.className = 'we animating-rain';
+                    div.style.animationDelay = `${(i * 1)}s`;
+                    div.innerText = $varwe;[mod - 5];
+                }
+
+                /* Insert structural breaks to mimic grid boundaries
+                if (i > 0 && i % 28 === 0) {
+                    let breakDiv = document.createElement('div');
+                    breakDiv.className = 'break';
+                    breakDiv.innerText = `BREAK - PX MAP RANGE: ${i * 36}px`;
+                    container.appendChild(breakDiv);
+                }*/ 
+                   
+                container.appendChild(div);
+
+            }
+        }
+
+        // Initialize execution on load
+        window.onload = function() {
+            $daterange();
+        };
+    </script>
+</html>

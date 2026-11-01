@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/slider.css">
+        <link rel="icon" type="image/icon" href="images/favicon2.ico">
+    
+
+
+
+        <title>
+            Slider App
+        </title>
+    </head>
+
+
+<body>
+
+
+<div id="slider-container">
+    
+    <header><h1><b class="headeraccent">S</b>LIDER APP</h1></header>
+
+
+    <div id="p1"><img src="https://pbs.twimg.com/media/Fn9GQFTaIAA1t2h?format=jpg&name=4096x4096" width="640px" height="auto" type="img/jpg"></div>
+
+
+<p class="navbutt"><a href="#p1" >Previous  </a> &nbsp; &nbsp; &nbsp; &nbsp;  <a href="#p2" >Next </a>  </p>
+
+</div>
+
+
+<div id="table">
+
+<div id="p2"><img src="https://pinaybootyshakers.com/portal/wp-content/uploads/2023/01/shutterstock_281021087-1066x1536.jpg" width="100%" height="auto" type="img/jpg"></div>
+<div id="p3"><img src="https://pinaybootyshakers.com/portal/wp-content/uploads/2023/01/shutterstock_281021087-1066x1536.jpg" width="100%" height="auto" type="img/jpg"></div>
+<div id="p4"><img src="https://pinaybootyshakers.com/portal/wp-content/uploads/2023/01/shutterstock_281021087-1066x1536.jpg" width="100%" height="auto" type="img/jpg"></div>
+<div id="p5"><img src="https://pinaybootyshakers.com/portal/wp-content/uploads/2023/01/shutterstock_281021087-1066x1536.jpg" width="100%" height="auto" type="img/jpg"></div>
+<div id="p6"><img src="" width="540px" height="auto" type="img/jpg"></div>
+<div id="p7"><img src="" width="540px" height="auto" type="img/jpg"></div>
+<div id="p8"><img src="" width="540px" height="auto" type="img/jpg"></div>
+<div id="p9"><img src="" width="540px" height="auto" type="img/jpg"></div>
+<div id="p10"><img src="" width="540px" height="auto" type="img/jpg"></div>
+<div id="p12"><img src="" width="540px" height="auto" type="img/jpg"></div>
+</div>
+
+
+
+
+
+<div id="javarice">
+    
+</div>
+<p>JAVA RICE SAMPLE</p>
+    <img id="javariceimg" src="" width="25%" height="auto">
+    <p>BUTTONS</p>
+    <button id="buttnrice" type="button" onclick="change(0)">.</button>
+    <button id="buttnrice" type="button" onclick="change(1)">.</button>
+    <button id="buttnrice" type="button" onclick="change(2)">.</button>
+    <button id="buttnrice" type="button" onclick="change(3)">.</button>
+
+   
+
+</body>
+ <script>
+        
+        document.getElementById("javarice").innerHTML = "";
+        document.getElementById("javarice") .style.fontSize = "33px";
+        
+      
+
+        function change(c)
+        {
+            var changepic;
+
+            if (c==0)  
+            {
+                changepic = "css/images/agree2018/Page2-2.PNG"
+            }  
+            else if (c==1)
+            {
+                changepic = "css/images/agree2018/Page2-3.PNG"
+            }
+            else if (c==2)
+             {
+                changepic = "css/images/agree2018/Page2-4.PNG"
+             }
+             else 
+             {
+                changepic = "css/images/agree2018/Page2-5.PNG"
+             }
+            
+            document.getElementById("javariceimg").src=changepic;
+        }
+        
+    </script>
+
+</html>
